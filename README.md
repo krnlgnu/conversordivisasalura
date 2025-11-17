@@ -24,7 +24,7 @@ manejo de errores y una arquitectura clara.
 Este proyecto **NO utiliza Maven**.\
 Se usa **Gson**, agregado manualmente.
 
-    lib/gson-2.10.1.jar
+    lib/gson-2.13.2.jar
 
 ## 🧰 Estructura del Proyecto
 
