@@ -36,7 +36,7 @@ Se usa **Gson**, agregado manualmente.
       ├── ParDivisa.java
       ├── Pluralizador.java
     /lib
-      └── gson-2.10.1.jar
+      └── gson-2.13.2.jar
     README.md
 
 ## 🌐 API utilizada
@@ -52,13 +52,13 @@ Se utiliza **ExchangeRate API**:
 Windows:
 
 ``` bash
-javac -cp lib/gson-2.10.1.jar src/*.java
+javac -cp lib/gson-2.13.2.jar src/*.java
 ```
 
 Linux / macOS:
 
 ``` bash
-javac -cp lib/gson-2.10.1.jar:src src/*.java
+javac -cp lib/gson-2.13.2.jar:src src/*.java
 ```
 
 ### 2️⃣ Ejecutar
@@ -66,13 +66,13 @@ javac -cp lib/gson-2.10.1.jar:src src/*.java
 Windows:
 
 ``` bash
-java -cp lib/gson-2.10.1.jar;src Main
+java -cp lib/gson-2.13.2.jar;src Main
 ```
 
 Linux / macOS:
 
 ``` bash
-java -cp lib/gson-2.10.1.jar:src Main
+java -cp lib/gson-2.13.2.jar:src Main
 ```
 
 ## 🧠 Pluralización inteligente
@@ -95,11 +95,12 @@ Salida:
 
 ## 🛠️ Clases del proyecto
 
-Clase              Función
-  ------------------ --------------------------------
-Main               Punto de entrada
-ConversorDivisas   Lógica principal de conversión
-ClienteAPI         Comunicación HTTP con la API
-Moneda             Representa cada divisa
-ParDivisa          Relación base → objetivo
-Pluralizador       Pluralización natural
+| Clase               | Función                                      |
+|---------------------|----------------------------------------------|
+| App                 | Punto de entrada                             |
+| MenuConsola         | Muestra el menu al usuario                   |
+| ProveedorDeTasasApi | Comunicación HTTP con la API                 |
+| Moneda              | Representa cada divisa                       |
+| ParDivisa           | Relación base → objetivo                     |
+| Formateador         | Pluraliza y conjuga los textos organicamente |
+| RespuestaConversion | Almacena los datos de json generado por gson |

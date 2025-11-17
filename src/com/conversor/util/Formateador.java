@@ -75,4 +75,8 @@ public class Formateador {
         // por defecto
         return w + "s";
     }
+
+    public static String verboEquivaler(double cantidad) {
+        return esSingular(cantidad) ? "equivale" : "equivalen";
+    }
 }

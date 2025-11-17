@@ -1,8 +1,8 @@
 package com.conversor.modelo;
 
 public class Moneda {
-    private final String codigo;
-    private final String nombre;
+    private String codigo;
+    private String nombre;
 
     public Moneda(String codigo, String nombre) {
         this.codigo = codigo;
@@ -17,6 +17,7 @@ public class Moneda {
         return nombre;
     }
 
+    //Este overrride se utlizara futuramente para escalar el proyecto a otras divisas
     @Override
     public String toString() {
         return codigo + " - " + nombre;

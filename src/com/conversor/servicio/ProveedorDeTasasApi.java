@@ -1,5 +1,4 @@
 package com.conversor.servicio;
-
 import com.conversor.modelo.RespuestaConversion;
 import com.google.gson.Gson;
 
@@ -10,11 +9,11 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 
 public class ProveedorDeTasasApi {
-    private static final String API_KEY = "a1290b72be4cfbf8cd503a09";
-    private static final String BASE_URL = "https://v6.exchangerate-api.com/v6/";
+    private String apiKey = "a1290b72be4cfbf8cd503a09";
+    private String urlBase = "https://v6.exchangerate-api.com/v6/";
 
-    private final HttpClient cliente;
-    private final Gson gson;
+    private HttpClient cliente;
+    private Gson gson;
 
     public ProveedorDeTasasApi() {
         this.cliente = HttpClient.newHttpClient();
@@ -24,7 +23,7 @@ public class ProveedorDeTasasApi {
     public RespuestaConversion convertir(String base, String objetivo, double monto)
             throws IOException, InterruptedException {
 
-        String url = BASE_URL + API_KEY + "/pair/" + base + "/" + objetivo + "/" + monto;
+        String url = urlBase + apiKey + "/pair/" + base + "/" + objetivo + "/" + monto;
 
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(URI.create(url))

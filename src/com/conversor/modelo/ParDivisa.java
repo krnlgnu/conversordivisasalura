@@ -1,8 +1,8 @@
 package com.conversor.modelo;
 
 public class ParDivisa {
-    private final Moneda base;
-    private final Moneda objetivo;
+    private Moneda base;
+    private Moneda objetivo;
 
     public ParDivisa(Moneda base, Moneda objetivo) {
         this.base = base;
